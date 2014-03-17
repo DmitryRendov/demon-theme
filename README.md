@@ -1,6 +1,6 @@
-# Шаблон сайта demon.of.by
+# A template of demon.of.by site
 
-Базовая часть шаблона
+Basic part of the template
 
 ## License
 
