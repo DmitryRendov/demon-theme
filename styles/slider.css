@@ -1,0 +1,65 @@
+/********** slider **********/
+.slider {
+    background: #efefef url("/assets/img/slider_bg.gif") top center repeat-x;
+    margin: 0 auto;
+    padding: 0;
+    height: 350px;
+}
+.sliderThin {
+    background: url("/assets/img/slider_thin_bg.gif") top center repeat-x;
+    margin: 0 auto;
+    padding: 0;
+    height: 187px;
+}
+#slider {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#slider ul, #slider li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#slider li {
+    width: 890px;
+    height: 350px;
+    overflow: hidden;
+}
+p#controls {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#prevBtn {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    width: 35px;
+    height: 75px;
+    position: absolute;
+    left: -55px;
+    top: -210px;
+}
+#nextBtn {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    width: 35px;
+    height: 75px;
+    position: absolute;
+    left: 910px;
+    top: -210px;
+}
+#prevBtn a {
+    display: block;
+    width: 35px;
+    height: 75px;
+    background: url("/assets/img/l_arrow.gif") no-repeat 0 0;
+}
+#nextBtn a {
+    display: block;
+    width: 35px;
+    height: 75px;
+    background: url("/assets/img/r_arrow.gif") no-repeat 0 0;
+}
