@@ -6,10 +6,10 @@
     height: 350px;
 }
 .sliderThin {
-    background: url("/assets/img/slider_thin_bg.gif") top center repeat-x;
+    background: url("/assets/img/slider_thin_bg.jpg") top center repeat-x;
     margin: 0 auto;
     padding: 0;
-    height: 187px;
+    height: 130px;
 }
 #slider {
     margin: 0;

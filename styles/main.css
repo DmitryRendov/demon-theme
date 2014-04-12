@@ -1,11 +1,15 @@
 @charset "utf-8";
 /**
- *  Name: Main CSS
- *  Date: April 2014
- *  Description: the main CSS file
- *  Version: 1.0
- *  Author: Dmitry Rendov
- *  Autor URI: http://demon.of.by
+ * Copyright (c) 2014 Dmitry Rendov
+ * http://demon.of.by
+ * 
+ * Name: Main CSS styles
+ * Date: April 2014
+ * Description: the main CSS file
+ * Version: 1.0
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
  */
 
 /************** Global **************/
@@ -28,9 +32,22 @@ p {
     font-family: 'PT Sans', Helvetica, Arial, Geneva, sans-serif;
     font-weight: normal;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     font-family: 'Scada', Helvetica, Arial, Geneva, sans-serif;
     font-weight: normal;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.6em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.2em;
 }
 strong {
     font-weight: bold;
@@ -42,6 +59,12 @@ a {
 a:hover, a:active {
     color: #000D3D;
     text-decoration: none;
+}
+a:focus {
+    background-color: #FFF699 !important;
+    border-bottom: 0 none;
+    color: #0D5980;
+    outline: medium none;
 }
 /************** Main block **************/
 .body {
@@ -59,8 +82,11 @@ a:hover, a:active {
     padding: 15px 5px;
     margin: 0;
 }
+.strikeout {
+    text-decoration:line-through;
+    font-color:#5F5F5F;
+}
 .body p {
-    font-size: 1.125em;
     color: #5f5f5f;
     padding: 10px 5px;
     margin: 0;
@@ -78,7 +104,7 @@ a:hover, a:active {
 }
 .body .intro {
     font-size: 1em;
-    text-indent :0;
+    text-indent: 0;
 }
 .body p.quote {
     margin: 5px 20px;
@@ -96,6 +122,83 @@ a:hover, a:active {
     margin: 5px 10px;
     padding: 0;
 }
+.body blockquote {
+    background: #f4f4f4;
+    border-bottom: 1px solid #d8d8d8;
+    border-left: 4px solid #ccc;
+    border-right: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    color: #505050;
+    margin: 0.3em;
+    padding: 5px 5px 5px 10px;
+}
+.body blockquote p {
+    font-size: 0.9em;
+    margin: 0;
+}
+.code {
+    margin: 10px 0;
+    padding: 5px 5px 10px 10px;
+    border: 1px dashed #02ff02;
+    color: white;
+    line-height: 1;
+    background-color: #0000bb;
+    font-family: Courier New, Courier, mono;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+.code strong {
+    color: #FFFFCC;
+    font-weight: bold;
+}
+.code pre {
+    font-size: 0.8em;
+}
+.command {
+    margin: 10px 0;
+    padding: 5px 5px 10px 10px;
+    border: 1px dashed #02ff02;
+    color: #24ff00;
+    background-color: black;
+    line-height: 1;
+    font-family: Courier New, Courier, mono;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+.command pre {
+    font-size: 0.8em;
+}
+.command strong {
+    color: #FFFFCC;
+    font-weight: bold;
+}
+
+.accordion {
+	border-bottom: solid 1px #c4c4c4;
+}
+.accordion h3 {
+	background: #e9e7e7 url("/assets/img/arrow-square.gif") no-repeat right -51px;
+	padding: 7px 15px;
+	margin: 0;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	border: solid 1px #c4c4c4;
+	border-bottom: none;
+	cursor: pointer;
+}
+.accordion h3:hover {
+	background-color: #e3e2e2;
+}
+.accordion h3.active {
+	background-position: right 5px;
+}
+.accordion div {
+	background: #f7f7f7;
+	margin: 0;
+	padding:  10px 15px 20px;
+	border-left: solid 1px #c4c4c4;
+	border-right: solid 1px #c4c4c4;
+}
+
 .left {
     width: 620px;
     float: left;
@@ -199,7 +302,7 @@ a:hover, a:active {
 .header_text_thin h1 {
     font-size: 2em;
     color: #FFFFFF;
-    padding: 82px 0 20px 20px;
+    padding: 50px 0 20px 20px;
     margin: 0;
 }
 /************** logo ****************/
@@ -382,6 +485,36 @@ p.response {
     clear: both;
     min-height: 65px;
 }
+.post-info {
+    color: #919699;
+    font-size: 0.8em;
+}
+.post-info a {
+    color: #919699;
+    text-decoration: underline;
+}
+.post-info a:hover {
+    color: #478FB3;
+}
+.comments_count {
+      display: inline-block;
+      vertical-align: text-top;
+      padding: 0 5px;
+      font-size: 0.8em;
+      line-height: 16px;
+      color: white;
+      text-shadow: 0 1px #902a27;
+      background: #e93631;
+      border-radius: 2px;
+      linear-gradient(top, #f65d5f, #e93631);
+      box-shadow(inset 0 1px rgba(white, .2), 0 1px rgba(black, .2));
+}
+.comments_count a {
+      color: white;
+}
+.comments_count a:hover {
+      color: white;
+}
 a.btn {
     font-size: 0.9em;
 }
@@ -484,6 +617,61 @@ p.calendar {
 .calendar:after {
     right: 5px;
 }
+.quip a:hover { text-decoration: none !important; }
+.quip-comment p {
+    text-indent: 0;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
+.quip-comment-text p {
+    padding-top: 0.5em !important;
+}
+.quip-comment-body {
+    padding: 5px 0px !important;
+}
+.quip-pagination-conainer {
+    margin: 0 auto;
+}
+.quip-comment-createdon {
+    font-style: normal !important;
+    font-size: 0.9em;
+}   
+.quip-pagination li {
+    color:#fff;
+    display: block;
+    float: left;
+    font-weight:bold;
+    padding: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    min-width:1em;
+    text-align:center;
+}
+
+.quip-pagination li a {
+    background:#2C64A5;
+    color: #fff;
+    padding: 6px 8px;
+}
+
+.quip-pagination li a:hover {
+    background:#b1b1b1;
+    color: #fff;
+    padding: 6px 8px;
+}
+
+.quip-pagination .quip-page-current {
+    background: #b1b1b1;
+    color: #fff;
+}
+
+.quip-pagination .quip-page-current.prev, .quip-pagination .quip-page-current.next{
+    color:#fff;
+    border-color:#999;
+    background:#fff;
+}
+
 /************** Footer **************/
 .footer {
     padding: 0;
@@ -511,10 +699,12 @@ p.calendar {
     font-size: 1em;
     color: #ffffff;
     padding: 5px;
+    border-bottom: 0.0625em solid rgba(71, 143, 179, 0.5);
     margin: 0;
 }
 .footer a:hover, a:active {
     color: #202020;
+    border-bottom-color: rgba(13, 89, 128, 0.5);
 }
 .footer img {
     margin: 2px 5px;
