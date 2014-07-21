@@ -1,6 +1,7 @@
 .nav {
     float: right;
     font-family: 'PT Sans', Helvetica, Arial, Geneva, sans-serif;
+    padding-top: 25px;
 }
 .nav a {
     display: block;

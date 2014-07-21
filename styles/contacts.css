@@ -1,5 +1,5 @@
 .block-content {
-    width: 960px;
+    width: 1240px;
     margin: 0 auto;
     padding: 0;
 }
@@ -13,8 +13,8 @@
     padding-right: 430px
 }
 .block-padding {
-    padding-bottom: 290px;
-    padding-top: 35px
+    padding-bottom: 255px;
+    padding-top: 25px
 }
 .row {
     margin-right: -15px;
@@ -70,7 +70,7 @@
     margin-bottom: 30px
 }
 .col-sm {
-    width: 33.33333333333333%;
+    width: 25%;
     float: left;
 }
 .center {
