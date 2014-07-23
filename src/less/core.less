@@ -1,0 +1,362 @@
+/************** Global **************/
+html {
+    height: 100%;
+}
+body {
+  padding-top: 98px;
+  padding-bottom: 20px;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+// Links
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+}
+
+h1 { font-size: @font-size-h1; }
+h2 { font-size: @font-size-h2; }
+h3 { font-size: @font-size-h3; }
+h4 { font-size: @font-size-h4; }
+h5 { font-size: @font-size-h5; }
+h6 { font-size: @font-size-h6; }
+
+ul, ol, li {
+    font-family: @font-family-serif;
+    font-weight: normal;
+}
+// Body
+// -------------------------
+
+p {
+  margin: 0 0 (@line-height-computed / 2);
+}
+.slider {
+  color: #FFFFFF;
+}
+.sltext {
+  padding-top: 1.9%;
+  font-size: 1.2em;
+  font-family: @font-family-serif;
+}
+.sltext h1 {
+  font-size: 2em;
+}
+.slimg {
+    
+}
+.slimg img {
+  .box-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.top_links {
+  padding: 0 0 10px 0 ;
+  background: #EFEFEF
+}
+.top_sup {
+  border-top: 1px solid #D6D6D6;
+}
+.top_sup h4 {
+  margin: 3px 0 0 0;
+  font-weight: bold;
+  word-break: break-all;
+}
+.top_sup img {
+  float: left;
+  padding-right: 12px;
+}
+.top_sup span {
+    display: block;
+    font-family: @font-family-serif;
+    margin-left: 66px;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #5F5F5F;
+}
+.top_sup_item {
+  border-right: 1px solid #D6D6D6;
+  height: 85px;
+}
+.post-info {
+  color: #5F5F5F;
+  display: block;
+  margin: 0 0 10px;
+}
+.content {
+  border-right: 1px solid #F2F2F2;
+}
+.imgleft {
+  float: left;
+  padding: 0 10px;
+}
+.news {
+  border-bottom: 1px solid #DDDDDD;
+  margin: 10px 0;
+  padding: 0 0 10px;
+}
+.news h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: 1.4em;
+  font-weight: 700;
+} 
+.comments_count {
+    display: inline-block;
+    vertical-align: text-top;
+    font-size: 0.7em;
+    line-height: 12px;
+    padding: 1px 3px;
+    color: white;
+    text-shadow: 0 1px #902a27;
+    background: #e93631;
+    border-radius: 2px;
+    #gradient > .vertical(#f65d5f, #e93631);
+    -webkit-box-shadow: inset 0 1px rgba(255,255,255, .2), 0 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px rgba(255,255,255, .2), 0 1px rgba(0, 0, 0, .2);
+}
+.comments_count a {
+    color: white;
+}
+.comments_count a:hover {
+    color: white;
+}
+.body blockquote {
+    background: none repeat scroll 0 0 #F4F4F4;
+    border-color: #D8D8D8 #D8D8D8 #D8D8D8 #CCCCCC;
+    border-style: solid;
+    border-width: 1px 1px 1px 4px;
+    color: #505050;
+    margin: 0.3em;
+    padding: 5px 5px 5px 10px;
+    font-size: 1em;
+}
+.body blockquote p {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+.body blockquote li {
+    font-size: 0.9em;
+    padding: 0;
+}
+
+.slider {
+  background: url("/images/slider_bg.gif") repeat-x scroll center top #EFEFEF;
+  min-height: 350px;
+}
+.sliderThin {
+    background: url("/images/slider_thin_bg.jpg") top center repeat-x;
+    margin: 0 auto;
+    padding: 0;
+    height: 130px;
+}
+.sliderThin h1 {
+    padding-top: 30px;
+    color: @body-bg;
+}
+
+.twitter {
+    line-height: 1.2em;
+    margin-left: 74px;
+    padding: 7px 0;
+}
+
+.footer {
+    font-family: @font-family-serif;
+    background: url("/images/footer_bg.gif") repeat-x scroll center top #2077C4;
+    font-size: 0.9em;
+    padding: 15px 0 5px 0;
+}
+
+.footer p {
+    color: @body-bg;
+    line-height: 1.2em;
+    margin: 0;
+}
+.footer a {
+    color: @body-bg;
+    margin: 0;
+}
+.footer a:hover, a:active {
+    color: @gray-darker;
+    border: none;
+}
+.copyrights a {
+    border-bottom: 1px dotted @link-hover-color; 
+}
+.footerlinks {
+    padding-top: 7px;
+}
+.social {
+    margin: 0;
+    padding: 0;
+}
+.social li {
+    display: inline-block;
+    list-style: none outside none;
+    margin-left: 20px;
+}
+.social li:first-child {
+    margin-left: 0;
+}
+.social-url {
+    font-size: 2em;
+    opacity: 0.7;
+}
+.social-url i {
+    color: #FFFFFF;
+    text-shadow: 1px 1px white, -1px -1px #333333;
+}
+/************** HTML5 blocks styling **************/
+header {
+    padding: 0;
+    margin: 0 auto;
+}
+figure {
+    text-align: center;
+}
+figcaption {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/************** Change default bootstrap theme **************/
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.carousel {
+    padding-top: 15px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+}
+.carousel-control {
+    width: auto !important
+}    
+
+.btn-sm, .btn-group-sm > .btn {
+    margin: 0;
+    padding: 3px 10px;
+}
+.lead {
+    line-height: 1.2em;
+}
+
+.syntaxhighlighter {
+    font-size: 0.8em !important;
+    overflow: auto;
+    overflow-y: hidden !important;
+}
+.syntaxhighlighter table .container:before {
+    display: none !important;
+}
+/************** Responsive design **************/
+/* Большие экраны, large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { 
+  
+}
+
+/* Для среднего размера, medium devices (desktops, 992px and up) */
+@media (max-width: @screen-md-min) {
+   .slimg {
+        display: none;
+    }
+   .sltext {
+        padding-top: 5%;
+        font-size: 1em;
+    }
+    .sliderThin h1 {
+        font-size: 2em;
+        padding-top: 35px;
+    }
+    .carousel-inner > .active {
+        left: 20px;
+    }
+    .top_sup_item, .top_sup_item_last {
+        padding: 0; 
+    }
+    .top_sup img {
+        padding-right: 0;
+    }
+    .top_sup span {
+        margin-left: 54px;
+    }
+    .top_sup h4 {
+      font-size: 0.9em;
+    }
+}
+
+/* Для совсем маленького экрана, small devices (tablets, 768px and up) */
+@media (max-width: @screen-sm-min) {
+    h1 { font-size: ceil((@font-size-h1 * 0.8)); }
+    h2 { font-size: ceil((@font-size-h2 * 0.8)); }
+    h3 { font-size: ceil((@font-size-h3 * 0.8)); }
+    h4 { font-size: ceil((@font-size-h4 * 0.8)); }
+    h5 { font-size: ceil((@font-size-h5 * 0.8)); }
+    h6 { font-size: ceil((@font-size-h6 * 0.8)); }
+   .sltext {
+        padding-top: 9%;
+        font-size: 0.8em;
+    }
+    .top_sup {
+      font-size: 0.8em;
+    }
+    .top_sup h4 {
+      font-size: 0.9em;
+    }
+    .top_sup span {
+        font-size: 1.1em;
+    }
+    .top_links {
+      padding: 0 0 0px;
+    }
+    .top_sup_item, .top_sup_item_last {
+      border: none;
+      padding: 0;
+      min-height: 78px;
+    }
+     .sltext {
+        font-size: 0.9em;
+    }
+    .sliderThin h1 {
+        font-size: 1.6em;
+        padding-top: 40px;
+    }
+    .footer p {
+        text-align: center;
+    }
+    .footerlinks {
+        padding-top: 0px;
+    }
+    .social {
+        margin: 7px 0 0;
+    }
+}
+

@@ -1,0 +1,33 @@
+{
+  "name": "demon.of.by",
+  "version": "2.2.1",
+  "description": "demon.of.by project",
+  "authors": [
+    "Dmitry Vl. Rendov"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libraries",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "modernizr": "latest",
+    "html5shiv": "latest",
+    "respond": "latest",
+    "SyntaxHighlighter": "latest"
+  },
+  "homepage": "https://github.com/DmitryRendov/demon-theme",
+  "main": "index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ]
+}
