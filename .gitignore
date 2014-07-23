@@ -26,15 +26,7 @@ node_modules
 libraries
 components
 
-*.min.js
-*.min.css
-*.html
-
 # Old folders
-css
 files
 gallery
-img
-js
-scripts
 
