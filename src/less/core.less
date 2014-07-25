@@ -2,6 +2,7 @@
 html {
     height: 100%;
 }
+
 body {
   padding-top: 98px;
   padding-bottom: 20px;
@@ -56,6 +57,22 @@ ul, ol, li {
 p {
   margin: 0 0 (@line-height-computed / 2);
 }
+.toright {
+    float: right;
+}
+.toleft {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+p.clr, .clr {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
 .slider {
   color: #FFFFFF;
 }
@@ -125,26 +142,6 @@ p {
   line-height: 1.4em;
   font-weight: 700;
 } 
-.comments_count {
-    display: inline-block;
-    vertical-align: text-top;
-    font-size: 0.7em;
-    line-height: 12px;
-    padding: 1px 3px;
-    color: white;
-    text-shadow: 0 1px #902a27;
-    background: #e93631;
-    border-radius: 2px;
-    #gradient > .vertical(#f65d5f, #e93631);
-    -webkit-box-shadow: inset 0 1px rgba(255,255,255, .2), 0 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 0 1px rgba(255,255,255, .2), 0 1px rgba(0, 0, 0, .2);
-}
-.comments_count a {
-    color: white;
-}
-.comments_count a:hover {
-    color: white;
-}
 .body blockquote {
     background: none repeat scroll 0 0 #F4F4F4;
     border-color: #D8D8D8 #D8D8D8 #D8D8D8 #CCCCCC;
@@ -166,11 +163,11 @@ p {
 }
 
 .slider {
-  background: url("/images/slider_bg.gif") repeat-x scroll center top #EFEFEF;
+  background: url("/assets/images/slider_bg.gif") repeat-x scroll center top #EFEFEF;
   min-height: 350px;
 }
 .sliderThin {
-    background: url("/images/slider_thin_bg.jpg") top center repeat-x;
+    background: url("/assets/images/slider_thin_bg.jpg") top center repeat-x;
     margin: 0 auto;
     padding: 0;
     height: 130px;
@@ -178,6 +175,28 @@ p {
 .sliderThin h1 {
     padding-top: 30px;
     color: @body-bg;
+}
+
+.news, .blogPost {
+    clear: both;
+    min-height: 65px;
+}
+
+.lrow {
+    float: left;
+    width: 50%;
+}
+.rrow {
+    float: right;
+    width: 50%;
+}
+
+.lrow .blogPost {
+    padding-right: 15px;
+}
+
+.rrow .blogPost {
+    padding-left: 15px;
 }
 
 .twitter {
@@ -188,7 +207,7 @@ p {
 
 .footer {
     font-family: @font-family-serif;
-    background: url("/images/footer_bg.gif") repeat-x scroll center top #2077C4;
+    background: url("/assets/images/footer_bg.gif") repeat-x scroll center top #2077C4;
     font-size: 0.9em;
     padding: 15px 0 5px 0;
 }
@@ -244,6 +263,163 @@ figcaption {
     font-size: 0.9em;
     text-align: center;
 }
+
+/************** Servers **************/
+.servers-maintenance img {
+    border: 1px solid #2B85C5;
+}
+.servers-maintenance {
+    left: 50%;
+    float: left;
+    position: relative;
+}
+.centered-left {
+    left: -50%;
+    float: left;
+    position: relative;
+}
+.server-item {
+    padding: 0 5px;
+}
+.server-target {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.server-target:hover .server-detail-wrapper {
+    top: 0px;
+    -webkit-transition: top 0.2s ease-out;
+    -moz-transition: top 0.2s ease-out;
+    -o-transition: top 0.2s ease-out;
+    transition: top 0.2s ease-out
+}
+.server-detail-wrapper {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2b5694), color-stop(100%, #40224b));
+    background-image: -webkit-linear-gradient(top, #2b5694,#40224b);
+    background-image: -moz-linear-gradient(top, #2b5694,#40224b);
+    background-image: -o-linear-gradient(top, #2b5694,#40224b);
+    background-image: linear-gradient(top, #2b5694,#40224b);
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    -webkit-transition: top 0.2s ease-out;
+    -moz-transition: top 0.2s ease-out;
+    -o-transition: top 0.2s ease-out;
+    transition: top 0.2s ease-out;
+    width: 100%
+}
+.server-detail {
+    border: 1px solid #fff;
+    bottom: 15px;
+    color: #fff;
+    left: 15px;
+    position: absolute;
+    right: 15px;
+    text-transform: uppercase;
+    top: 15px
+}
+.server-detail-icon {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+}
+.server-detail-title {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center
+}
+.server-detail-button {
+    display: block;
+    text-align: center
+}
+.server-detail-button .more {
+    border: 1px solid rgba(255,255,255,0.2);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    border-radius: 16px;
+    display: inline-block;
+    padding: 0 5px;
+    -webkit-transition: border-color 0.2s linear;
+    -moz-transition: border-color 0.2s linear;
+    -o-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear
+}
+.server-detail-button .more:hover {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #fff
+}
+
+/************** Resume **************/
+.resume {
+    padding-bottom: 25px;
+}
+.resume h5 {
+    font-size: 1.4em;
+}
+.resume p {
+    text-indent: 0;
+    padding: 0;
+}
+.resume .edu {
+    border-left: 3px solid #E2E2E2;
+    margin-left: 10px;
+    margin-top: 25px;
+    padding-left: 30px;
+}
+.resume .timeline-item {
+    margin-top: 25px;
+}
+.resume .timeline-item .timeline-title {
+    color: #414141;
+    margin: 16px 0 5px;
+}
+.resume .timeline-item span.job-title {
+    display: block;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+.resume .timeline-item .date {
+    color: #FFFFFF;
+    font-weight: bold;
+    position: relative;
+}
+.resume .timeline-item .date span {
+    background: #2B85C5;
+    border-radius: 3px 3px 3px 3px;
+    font-weight: 600;
+    padding: 5px 8px;
+}
+.resume .timeline-item .date .dot {
+    background: #2B85C5;
+    border-radius: 6px 6px 6px 6px;
+    display: block;
+    height: 12px;
+    left: -37px;
+    position: absolute;
+    top: 5px;
+    width: 12px;
+}
+.resume .jobs {
+    border-left: 3px solid #E2E2E2;
+    margin-left: 10px;
+    margin-top: 25px;
+    padding-left: 30px;
+}
+.resume .experience-item {
+    margin-top: 20px;
+}
+.resume .experience-item p {
+    color: #414141;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
 
 /************** Change default bootstrap theme **************/
 
@@ -329,7 +505,7 @@ h1, h2, h3 {
       font-size: 0.8em;
     }
     .top_sup h4 {
-      font-size: 0.9em;
+      font-size: 1.3em;
     }
     .top_sup span {
         font-size: 1.1em;
@@ -348,6 +524,9 @@ h1, h2, h3 {
     .sliderThin h1 {
         font-size: 1.6em;
         padding-top: 40px;
+    }
+    .block-subtitle {
+        font-size: 20px;
     }
     .footer p {
         text-align: center;

@@ -30,3 +30,6 @@ components
 files
 gallery
 
+#system directives
+
+.htaccess
