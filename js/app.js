@@ -1,3 +1,5 @@
+;(function( window, undefined ){ 
+ 'use strict'; 
 /*global
  $
  */
@@ -246,3 +248,5 @@ $(document).ready(function() {
   MainApp.fixDropdownBehaviour();
   new MainApp();
 });
+
+}( window ));

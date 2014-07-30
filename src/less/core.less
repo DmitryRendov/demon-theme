@@ -106,6 +106,7 @@ p.clr, .clr {
 .top_sup img {
   float: left;
   padding-right: 12px;
+  width: inherit;
 }
 .top_sup span {
     display: block;
@@ -127,9 +128,12 @@ p.clr, .clr {
 .content {
   border-right: 1px solid #F2F2F2;
 }
-.imgleft {
-  float: left;
-  padding: 0 10px;
+img.img-about {
+    border: 1px solid #EEEEEE;
+    float: left;
+    margin: 0 15px 10px 0;
+    padding: 5px;
+    width: 25%;
 }
 .news {
   border-bottom: 1px solid #DDDDDD;
@@ -205,6 +209,10 @@ p.clr, .clr {
     padding: 7px 0;
 }
 
+.twitterLogo {
+    float: left;
+    width: inherit;
+}
 .footer {
     font-family: @font-family-serif;
     background: url("/assets/images/footer_bg.gif") repeat-x scroll center top #2077C4;
@@ -294,11 +302,7 @@ figcaption {
     transition: top 0.2s ease-out
 }
 .server-detail-wrapper {
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2b5694), color-stop(100%, #40224b));
-    background-image: -webkit-linear-gradient(top, #2b5694,#40224b);
-    background-image: -moz-linear-gradient(top, #2b5694,#40224b);
-    background-image: -o-linear-gradient(top, #2b5694,#40224b);
-    background-image: linear-gradient(top, #2b5694,#40224b);
+    #gradient > .vertical(#2b5694, #40224b);
     height: 100%;
     position: absolute;
     top: -100%;
@@ -420,6 +424,84 @@ figcaption {
     margin-bottom: 2px;
 }
 
+.color-white {
+    color: #FFFFFF;
+}
+
+.color-lead {
+    color: #3498DB;
+}
+
+.info-thumbnail {
+    background-color: transparent;
+    border: 0 none;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 0 0 1px;
+    position: relative;
+}
+
+.info-thumbnail > div:first-child, .info-thumbnail > img:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.info-thumbnail > div:last-child, .info-thumbnail > img:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.info-thumbnail .round {
+    border-radius: 4px 4px 4px 4px;
+}
+.info-thumbnail .icon {
+    left: 10px;
+    position: absolute;
+    top: -30px;
+}
+.info-thumbnail .icon .fa-stack {
+    font-size: 30px;
+}
+.info-thumbnail .caption {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: inherit;
+    padding: 20px;
+}
+.info-thumbnail .caption.bordered {
+    margin: 0 1px;
+}
+.info-thumbnail .caption [class*="fa fa-"] {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+    width: 20px;
+}
+.info-thumbnail .caption h3 {
+    margin-top: 0;
+}
+.info-thumbnail .caption h3 [class*="fa fa-"] {
+    font-size: 1.5em;
+    margin-left: -8px;
+    margin-right: 8px;
+    vertical-align: baseline;
+    width: auto;
+}
+.info-thumbnail-link {
+    color: inherit;
+}
+.info-thumbnail-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-thumbnail-link:hover .info-thumbnail {
+    animation: 0.4s ease 0s normal forwards 1 info-thumbnail;
+}
+.info-thumbnail-link:hover .info-thumbnail .service {
+    opacity: 1;
+}
+.info-thumbnail-link:hover .info-thumbnail .service .service-name {
+    transform: scale(1, 1);
+}
 
 /************** Change default bootstrap theme **************/
 
@@ -427,16 +509,20 @@ h1, h2, h3 {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 .carousel {
     padding-top: 15px;
 }
+
 .carousel-control.right, .carousel-control.left {
     background-image: none;
 }
 .carousel-control {
     width: auto !important
 }    
-
+.carousel-inner > .active {
+    left: 15px;
+}
 .btn-sm, .btn-group-sm > .btn {
     margin: 0;
     padding: 3px 10px;
@@ -453,18 +539,19 @@ h1, h2, h3 {
 .syntaxhighlighter table .container:before {
     display: none !important;
 }
+
 /************** Responsive design **************/
-/* Большие экраны, large devices (large desktops, 1200px and up) */
+/* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { 
   
 }
 
-/* Для среднего размера, medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 992px and up) */
 @media (max-width: @screen-md-min) {
-   .slimg {
+    .slimg {
         display: none;
     }
-   .sltext {
+    .sltext {
         padding-top: 5%;
         font-size: 1em;
     }
@@ -489,7 +576,7 @@ h1, h2, h3 {
     }
 }
 
-/* Для совсем маленького экрана, small devices (tablets, 768px and up) */
+/* Small devices (tablets, 768px and up) */
 @media (max-width: @screen-sm-min) {
     h1 { font-size: ceil((@font-size-h1 * 0.8)); }
     h2 { font-size: ceil((@font-size-h2 * 0.8)); }
@@ -497,10 +584,6 @@ h1, h2, h3 {
     h4 { font-size: ceil((@font-size-h4 * 0.8)); }
     h5 { font-size: ceil((@font-size-h5 * 0.8)); }
     h6 { font-size: ceil((@font-size-h6 * 0.8)); }
-   .sltext {
-        padding-top: 9%;
-        font-size: 0.8em;
-    }
     .top_sup {
       font-size: 0.8em;
     }
@@ -518,7 +601,9 @@ h1, h2, h3 {
       padding: 0;
       min-height: 78px;
     }
-     .sltext {
+    .sltext {
+        padding: 9% 35px 0 0;
+        line-height: 1.2em;
         font-size: 0.9em;
     }
     .sliderThin h1 {

@@ -22,7 +22,8 @@
     "modernizr": "latest",
     "html5shiv": "latest",
     "respond": "latest",
-    "SyntaxHighlighter": "latest"
+    "SyntaxHighlighter": "latest",
+    "matchHeight": "~0.5.2"
   },
   "homepage": "https://github.com/DmitryRendov/demon-theme",
   "main": "index.html",

@@ -1,41 +1,7 @@
-.block-content {
-    width: 1240px;
-    margin: 0 auto;
-    padding: 0;
-}
-.block-content p {
-    text-indent: 0;
-}
-.block-padding {
-    padding-bottom: 255px;
-    padding-top: 25px
-}
 .features-simple-block {
     font-size: 18px;
-    position: relative;
-}
-.features-simple-block a {
-    color: #7a829e;
-    text-decoration: underline
-}
-.features-icon {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(top, #a8bbd6, #5465a2);
-    color: #5465a2;
-    font-size: 80px;
-    margin-bottom: 30px
-}
-.features-simple-block {
-    font-size: 18px;
+    padding: 10px 0 0 0;
     position: relative
-}
-.features-simple-block a {
-    color: #7a829e;
-    text-decoration: underline
-}
-.features-simple-block .radial-icon-wrapper {
-    margin-bottom: 30px
 }
 .features-simple-block:after {
     background-image: url("/assets/images/separator-large.png");
@@ -58,13 +24,14 @@
     background-image: -webkit-linear-gradient(top, #95d5d3, #6f7eb1);
     font-size: 80px;
     margin-bottom: 30px
+    position: relative;
 }
-.features-simple-icon {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(top, #95D5D3, #6F7EB1);
-    font-size: 80px;
-    margin-bottom: 30px;
+.features-simple-icon:after {
+  content: " ";
+  position: absolute; top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#FFFFFF, rgba(255,255,255,.0));
 }
 .block-subtitle {
     color: #5465A2;

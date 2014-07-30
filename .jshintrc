@@ -12,7 +12,8 @@
   "node": true,
   "globals": {
      "$": false,
-     "jQuery": false
+     "jQuery": false,
+     "console": false
   }
 }
 

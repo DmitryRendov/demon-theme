@@ -101,7 +101,7 @@ module.exports = function(grunt) {
 
     },
     clean : {
-      js : ['<%= globalConfig.src %>/js/app.js', '<%= globalConfig.scripts %>/app.min.js'],
+      js : ['<%= globalConfig.scripts %>/app.js', '<%= globalConfig.scripts %>/app.min.js'],
       css : ['<%= globalConfig.styles %>/styles.css', '<%= globalConfig.styles %>/styles.min.css']
     },
     less : {
@@ -145,7 +145,7 @@ module.exports = function(grunt) {
     concat : {
       dist : {
         src : ['<%= globalConfig.src %>/js/**/*.js'],
-        dest : '<%= globalConfig.src %>/js/app.js',
+        dest : '<%= globalConfig.scripts %>/app.js',
         options : {
           banner : ";(function( window, undefined ){ \n 'use strict'; \n",
           footer : "\n}( window ));"
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
     uglify : {
       options : {
         // the banner is inserted at the top of the output
-        banner : '/*! \n * <%= pkg.name %> <%= pkg.version %> (<%= pkg.homepage %>) \n * Copyright <%= grunt.template.today("yyyy") %> Dmitry Vl. Rendov \n * Licensed under MIT (https://github.com/DmitryRendov/nanny-theme/blob/master/LICENSE) \n */ \n'
+        banner : '/*! \n * <%= pkg.name %> <%= pkg.version %> (<%= pkg.homepage %>) \n * Copyright <%= grunt.template.today("yyyy") %> Dmitry Vl. Rendov \n * Licensed under MIT (https://github.com/DmitryRendov/demon-theme/blob/master/LICENSE) \n */ \n'
       },
       dist : {
         files : {
